@@ -24,6 +24,17 @@ function App() {
     );
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    const searchTerm = searchWord.toLowerCase();
+    const foundWord = dictionaryData.find(
+      (entry) => entry.word.toLowerCase() === searchTerm
+    );
+    setResult(
+      foundWord ? foundWord.meaning : "Word not found in the dictionary."
+    );
+  };
+
   return (
     <div>
       <h1>Dictionary App</h1>
@@ -35,11 +46,10 @@ function App() {
           required
           onChange={(e) => setSearchWord(e.target.value)}
         />
-        <button>Search</button>
+        <button onClick={handleClick}>Search</button>
       </form>
-      {/* Ensure Definition label is always present */}
-        <h4>Definition:</h4>
-        <p>{result}</p>
+      <h4>Definition:</h4>
+      <p>{result}</p>
     </div>
   );
 }
