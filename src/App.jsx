@@ -46,7 +46,9 @@ function App() {
           required
           onChange={(e) => setSearchWord(e.target.value)}
         />
-        <button onClick={handleClick}>Search</button>
+        <button type="submit" onClick={handleClick}>
+          Search
+        </button>
       </form>
       <h4>Definition:</h4>
       <p>{result}</p>
