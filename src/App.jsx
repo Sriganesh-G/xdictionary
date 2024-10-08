@@ -38,10 +38,8 @@ function App() {
         <button>Search</button>
       </form>
       {/* Ensure Definition label is always present */}
-      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
         <h4>Definition:</h4>
         <p>{result}</p>
-      </div>
     </div>
   );
 }
