@@ -39,7 +39,7 @@ function App() {
       </form>
       {/* Ensure Definition label is always present */}
       <h4>
-        Definition: <span>{result || "Please enter a word to search."}</span>
+        Definition: <span>{result}</span>
       </h4>
     </div>
   );
